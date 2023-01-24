@@ -2,7 +2,7 @@ plugins {
   kotlin("multiplatform")
   id("com.android.library")
   id("com.google.devtools.ksp").version("1.8.0-1.0.8")
-  id("com.rickclephas.kmp.nativecoroutines").version("1.0.0-ALPHA-4")
+  id("com.rickclephas.kmp.nativecoroutines").version("0.13.1")
 }
 
 kotlin {
@@ -45,10 +45,6 @@ kotlin {
       iosX64Test.dependsOn(this)
       iosArm64Test.dependsOn(this)
       iosSimulatorArm64Test.dependsOn(this)
-    }
-
-    all {
-      languageSettings.optIn("kotlin.experimental.ExperimentalObjCName")
     }
   }
 }
